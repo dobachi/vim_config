@@ -1,4 +1,6 @@
-# vim_config for my own ## Warning!
+# vim_config for my own
+
+## Warning!
 
 These configuration and procedure are for my own, so that they may not be useful for you.
 
