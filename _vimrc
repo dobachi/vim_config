@@ -44,3 +44,8 @@ map ,n :NERDTreeToggle<CR>
 
 " cheatsheet
 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
+
+colorscheme morning
+
+let &guifont='ＭＳ ゴシック'
+
