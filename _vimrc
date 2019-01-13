@@ -18,6 +18,7 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('https://github.com/scrooloose/nerdtree.git')
   call dein#add('https://github.com/simeji/winresizer.git')
   call dein#add('https://github.com/reireias/vim-cheatsheet.git')
+  call dein#add('https://github.com/Shougo/deol.nvim.git')
 
   " Required:
   call dein#end()
