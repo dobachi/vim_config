@@ -23,3 +23,13 @@
 ## unite-outline
 
 `,u` : Open outline
+
+## Terminal
+
+`:terminal`; Start a terminal
+
+`<C-w> N`: Text mode
+
+`i`: Enter normal terminal mode
+
+reference: https://techracho.bpsinc.jp/tsunekawa/2018_09_11/61576
