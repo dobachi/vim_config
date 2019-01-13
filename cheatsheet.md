@@ -24,9 +24,11 @@
 
 `,u` : Open outline
 
-## Terminal
+## Deol (Terminal)
 
-`:terminal`; Start a terminal
+`,u` : Open a terminal with splited window
+
+`:Deol`; Start a terminal in the current window
 
 `<C-w> N`: Text mode
 
