@@ -50,8 +50,6 @@ map ,n :NERDTreeToggle<CR>
 " cheatsheet
 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
 
-colorscheme morning
-
 let &guifont='ＭＳ ゴシック'
 
 " https://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca
