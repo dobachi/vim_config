@@ -39,7 +39,7 @@ endif
 
 " unite-outline
 let g:unite_split_rule = 'botright'
-noremap ,u :Unite -vertical -winwidth=40 outline<CR>
+noremap ,u :Unite -vertical -winwidth=40 -no-quit outline<CR>
 
 " Deol
 noremap ,t :Deol -split<CR>
