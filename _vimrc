@@ -49,6 +49,7 @@ noremap ,u :Unite -vertical -winwidth=40 -no-quit outline<CR>
 noremap ,t :Deol -split<CR>
 
 " NERDTree
+let NERDTreeWinSize=25
 map ,n :NERDTreeToggle<CR>
 
 " cheatsheet
