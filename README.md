@@ -12,6 +12,16 @@ These configuration and procedure are for my own, so that they may not be useful
 
 ## How to use this configuraton files
 
+### Clone this repository
+
+```
+$ cd
+$ mkdir ~/Sources
+$ cd ~/Sources
+$ git clone https://github.com/dobachi/vim_config.git
+
+```
+
 ### Install dein.vim
 
 According to [dein.vim] 's README, install dein.vim.
@@ -48,6 +58,14 @@ Let's create symlink to enable the configuration.
 
 ```
 $ ln -s ~/Sources/vim_config/cheatsheet.md ~/.vim/cheatsheet.md
+```
+
+### Configure the color
+
+Create a link of the color configuration file.
+```
+$ mkdir -p ~/.vim/colors
+$ ln -s ~/Sources/vim_config/color/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
 ```
 
 vim: tw=0

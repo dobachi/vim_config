@@ -1,3 +1,6 @@
+if &compatible
+  set nocompatible
+endif
 
 " Required:
 set runtimepath+=~/vimfiles/bundles/repos/github.com/Shougo/dein.vim
@@ -20,6 +23,7 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('https://github.com/reireias/vim-cheatsheet.git')
   call dein#add('https://github.com/Shougo/deol.nvim.git')
   call dein#add('https://github.com/kana/vim-submode.git')
+  call dein#add('https://github.com/w0ng/vim-hybrid.git')
 
   " Required:
   call dein#end()
@@ -80,11 +84,15 @@ nnoremap sQ :<C-u>bd<CR>
 nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
 nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 
-call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
-call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
-call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
-call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
-call submode#map('bufmove', 'n', '', '>', '<C-w>>')
-call submode#map('bufmove', 'n', '', '<', '<C-w><')
-call submode#map('bufmove', 'n', '', '+', '<C-w>+')
-call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+" call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+" call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+" call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+" call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+" call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+" call submode#map('bufmove', 'n', '', '<', '<C-w><')
+" call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+" call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
+" Color
+set background=dark
+colorscheme hybrid
