@@ -49,7 +49,6 @@ noremap ,u :Unite -vertical -winwidth=40 -no-quit outline<CR>
 noremap ,t :Deol -split<CR>
 
 " NERDTree
-let NERDTreeWinSize=25
 map ,n :NERDTreeToggle<CR>
 
 " cheatsheet
@@ -97,3 +96,6 @@ nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
 " Color
 set background=dark
 colorscheme hybrid
+
+" File Encodings
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
