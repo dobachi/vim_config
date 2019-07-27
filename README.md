@@ -60,12 +60,4 @@ Let's create symlink to enable the configuration.
 $ ln -s ~/Sources/vim_config/cheatsheet.md ~/.vim/cheatsheet.md
 ```
 
-### Configure the color
-
-Create a link of the color configuration file.
-```
-$ mkdir -p ~/.vim/colors
-$ ln -s ~/Sources/vim_config/color/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
-```
-
 vim: tw=0
