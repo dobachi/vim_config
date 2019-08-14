@@ -99,3 +99,6 @@ colorscheme hybrid
 
 " File Encodings
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
+
+" Wrap at the start and end of lines
+set whichwrap=b,s,h,l,<,>,[,],~
