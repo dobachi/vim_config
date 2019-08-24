@@ -50,6 +50,7 @@ noremap ,t :Deol -split<CR>
 
 " NERDTree
 map ,n :NERDTreeToggle<CR>
+let NERDTreeSortOrder=['\/$', '*', '\.swp$',  '\.bak$', '\~$', '[[-timestamp]]']
 
 " cheatsheet
 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
