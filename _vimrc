@@ -49,8 +49,11 @@ noremap ,u :Unite -vertical -winwidth=40 -no-quit outline<CR>
 noremap ,t :Deol -split<CR>
 
 " NERDTree
-map ,n :NERDTreeToggle<CR>
+map ,ne :NERDTreeToggle<CR>
+map ,nt :let NERDTreeSortOrder=['\/$', '*', '\.swp$',  '\.bak$', '\~$', '[[-timestamp]]']<CR>
+map ,nn :let NERDTreeSortOrder=['\/$', '*', '\.swp$',  '\.bak$', '\~$']<CR>
 let NERDTreeSortOrder=['\/$', '*', '\.swp$',  '\.bak$', '\~$', '[[-timestamp]]']
+
 
 " cheatsheet
 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
