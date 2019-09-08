@@ -38,7 +38,11 @@ sN : open next buffer
 
 ## scrooloose/nerdtree
 
-`,n` : Open nerdtree
+`,ne` : Open nerdtree
+
+`,nt` : Open nerdtree (timestamp order)
+
+`,nn` : Open nerdtree (name order)
 
 ## simeji/winresizer
 
