@@ -24,6 +24,8 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('https://github.com/Shougo/deol.nvim.git')
   call dein#add('https://github.com/kana/vim-submode.git')
   call dein#add('https://github.com/w0ng/vim-hybrid.git')
+  call dein#add('https://github.com/kannokanno/previm.git')
+  call dein#add('https://github.com/tyru/open-browser.vim.git')
 
   " Required:
   call dein#end()
