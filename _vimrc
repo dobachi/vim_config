@@ -26,6 +26,7 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('https://github.com/w0ng/vim-hybrid.git')
   call dein#add('https://github.com/kannokanno/previm.git')
   call dein#add('https://github.com/tyru/open-browser.vim.git')
+  call dein#add('mattn/sonictemplate-vim')
 
   " Required:
   call dein#end()
@@ -108,3 +109,6 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,sjis,cp932,euc-jp,cp20932
 
 " Wrap at the start and end of lines
 set whichwrap=b,s,h,l,<,>,[,],~
+
+" Template
+let g:sonictemplate_vim_template_dir = ['~/.vim/template']
