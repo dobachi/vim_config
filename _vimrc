@@ -24,9 +24,10 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('https://github.com/Shougo/deol.nvim.git')
   call dein#add('https://github.com/kana/vim-submode.git')
   call dein#add('https://github.com/w0ng/vim-hybrid.git')
-  call dein#add('https://github.com/kannokanno/previm.git')
-  call dein#add('https://github.com/tyru/open-browser.vim.git')
   call dein#add('mattn/sonictemplate-vim')
+  call dein#add('shime/vim-livedown')
+  call dein#add('godlygeek/tabular')
+  call dein#add('plasticboy/vim-markdown')
 
   " Required:
   call dein#end()
@@ -112,3 +113,12 @@ set whichwrap=b,s,h,l,<,>,[,],~
 
 " Template
 let g:sonictemplate_vim_template_dir = ['~/.vim/template']
+
+" dein
+let g:dein#auto_recache = 1
+
+" livedown
+nmap gm :LivedownToggle<CR>
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1

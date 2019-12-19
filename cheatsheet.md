@@ -71,3 +71,7 @@ https://github.com/simeji/winresizer#customize-options
 `i`: Enter normal terminal mode
 
 reference: https://techracho.bpsinc.jp/tsunekawa/2018_09_11/61576
+
+## livedown
+
+'gm' : toggle livedown
