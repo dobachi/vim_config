@@ -120,3 +120,6 @@ let g:dein#auto_recache = 1
 
 " vim-markdown
 let g:vim_markdown_folding_disabled = 1
+
+" modeline
+set modeline
