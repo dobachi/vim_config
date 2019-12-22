@@ -29,6 +29,7 @@ if dein#load_state('~/vimfiles/bundles')
   call dein#add('plasticboy/vim-markdown')
   call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
                \ 'build': 'cd app & npm install' })
+  call dein#add('ferrine/md-img-paste.vim')
 
   " Required:
   call dein#end()
@@ -123,3 +124,12 @@ let g:vim_markdown_folding_disabled = 1
 
 " modeline
 set modeline
+
+" mg-img-paste
+let g:mdip_imgdir = 'img'
+let g:mdip_imgname = 'image'
+nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
+" Markdown Preview
+nnoremap mp :MarkdownPreview<CR>
+nnoremap ms :MarkdownPreviewStop<CR>
