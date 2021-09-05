@@ -133,3 +133,6 @@ nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 " Markdown Preview
 nnoremap mp :MarkdownPreview<CR>
 nnoremap ms :MarkdownPreviewStop<CR>
+
+" flexible delete
+set backspace=indent,eol,start
