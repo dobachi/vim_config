@@ -19,6 +19,62 @@ if &runtimepath !~# '/dein.vim'
         \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
 
+" Ward off unexpected things that your distro might have made, as
+" well as sanely reset options when re-sourcing .vimrc
+set nocompatible
+
+" Set dein base path (required)
+let s:dein_base = '~/.cache/dein/'
+
+" Set dein source path (required)
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
+
+" Set dein runtime path (required)
+execute 'set runtimepath+=' . s:dein_src
+
+" Call dein initialization (required)
+call dein#begin(s:dein_base)
+
+call dein#add(s:dein_src)
+
+" Your plugins go here:
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Shougo/unite.vim')
+call dein#add('https://github.com/Shougo/unite-outline.git')
+call dein#add('https://github.com/scrooloose/nerdtree.git')
+call dein#add('https://github.com/simeji/winresizer.git')
+call dein#add('https://github.com/reireias/vim-cheatsheet.git')
+call dein#add('https://github.com/Shougo/deol.nvim.git')
+call dein#add('https://github.com/kana/vim-submode.git')
+call dein#add('https://github.com/w0ng/vim-hybrid.git')
+call dein#add('mattn/sonictemplate-vim')
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
+call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
+             \ 'build': 'cd app & npm install' })
+call dein#add('ferrine/md-img-paste.vim')
+
+" Finish dein initialization (required)
+call dein#end()
+
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+if has('filetype')
+  filetype indent plugin on
+endif
+
+" Enable syntax highlighting
+if has('syntax')
+  syntax on
+endif
+
+" Uncomment if you want to install not-installed plugins on startup.
+if dein#check_install()
+ call dein#install()
+endif
+
 " unite-outline
 let g:unite_split_rule = 'botright'
 noremap ,u :Unite -vertical -winwidth=40 -no-quit outline<CR>
