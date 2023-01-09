@@ -2,50 +2,22 @@ if &compatible
   set nocompatible
 endif
 
-" Required:
-set runtimepath+=~/vimfiles/bundles/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('~/vimfiles/bundles')
-  call dein#begin('~/vimfiles/bundles')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/vimfiles/bundles/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here like this:
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('https://github.com/Shougo/unite-outline.git')
-  call dein#add('https://github.com/scrooloose/nerdtree.git')
-  call dein#add('https://github.com/simeji/winresizer.git')
-  call dein#add('https://github.com/reireias/vim-cheatsheet.git')
-  call dein#add('https://github.com/Shougo/deol.nvim.git')
-  call dein#add('https://github.com/kana/vim-submode.git')
-  call dein#add('https://github.com/w0ng/vim-hybrid.git')
-  call dein#add('mattn/sonictemplate-vim')
-  call dein#add('godlygeek/tabular')
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
-               \ 'build': 'cd app & npm install' })
-  call dein#add('ferrine/md-img-paste.vim')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
+" Dein
+let $CACHE = expand('~/.cache')
+if !isdirectory($CACHE)
+  call mkdir($CACHE, 'p')
 endif
-
-" Required:
-filetype plugin indent on
-syntax enable
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
+if &runtimepath !~# '/dein.vim'
+  let s:dein_dir = fnamemodify('dein.vim', ':p')
+  if !isdirectory(s:dein_dir)
+    let s:dein_dir = $CACHE . '/dein/repos/github.com/Shougo/dein.vim'
+    if !isdirectory(s:dein_dir)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
+    endif
+  endif
+  execute 'set runtimepath^=' . substitute(
+        \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
-
-"End dein Scripts-------------------------
 
 " unite-outline
 let g:unite_split_rule = 'botright'
