@@ -164,3 +164,4 @@ nnoremap ms :MarkdownPreviewStop<CR>
 
 " flexible delete
 set backspace=indent,eol,start
+set belloff=all
