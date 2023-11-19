@@ -75,3 +75,8 @@ reference: https://techracho.bpsinc.jp/tsunekawa/2018_09_11/61576
 ## livedown
 
 'gm' : toggle livedown
+
+## openbroser
+
+'gx' : open by browser
+

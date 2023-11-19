@@ -54,6 +54,7 @@ call dein#add('plasticboy/vim-markdown')
 call dein#add('iamcco/markdown-preview.nvim', {'on_ft': ['markdown', 'pandoc.markdown', 'rmd'],
              \ 'build': 'cd app & npm install' })
 call dein#add('ferrine/md-img-paste.vim')
+call dein#add('tyru/open-browser.vim')
 
 " Finish dein initialization (required)
 call dein#end()
@@ -165,3 +166,9 @@ nnoremap ms :MarkdownPreviewStop<CR>
 " flexible delete
 set backspace=indent,eol,start
 set belloff=all
+
+" openbrowser smart search
+" https://easyramble.com/open-url-with-browser-from-vim.html
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
